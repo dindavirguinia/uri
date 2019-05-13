@@ -119,7 +119,7 @@ public class Jadwal extends AppCompatActivity implements View.OnClickListener{
 
 
 
-                Toast.makeText(this, "Done!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Jadwal Tersimpan!", Toast.LENGTH_SHORT).show();
 
                 break;
 
@@ -129,7 +129,7 @@ public class Jadwal extends AppCompatActivity implements View.OnClickListener{
 
                 alarm.cancel(alarmIntent);
 
-                Toast.makeText(this, "Canceled.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dibatalkan", Toast.LENGTH_SHORT).show();
 
                 break;
 
