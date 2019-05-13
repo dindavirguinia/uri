@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 
 import android.widget.TimePicker;
@@ -55,8 +56,9 @@ public class Jadwal extends AppCompatActivity implements View.OnClickListener{
 
         EditText editText = findViewById(R.id.inputdata);
 
-        TimePicker timePicker = findViewById(R.id.pilihwaktu);
+        //TimePicker timePicker = findViewById(R.id.pilihwaktu);
 
+        DatePicker datePicker = findViewById(R.id.pilihwaktu);
 
 
 // Set notificationId & text.
@@ -84,9 +86,13 @@ public class Jadwal extends AppCompatActivity implements View.OnClickListener{
 
             case R.id.setBtn:
 
-                int hour = timePicker.getCurrentHour();
+                int year = datePicker.getYear();
+                int month = datePicker.getMonth();
+                int dayofmonth = datePicker.getDayOfMonth();
 
-                int minute = timePicker.getCurrentMinute();
+               // int hour = timePicker.getCurrentHour();
+
+                //int minute = timePicker.getCurrentMinute();
 
 
 
@@ -95,11 +101,11 @@ public class Jadwal extends AppCompatActivity implements View.OnClickListener{
 
                 Calendar startTime = Calendar.getInstance();
 
-                startTime.set(Calendar.HOUR_OF_DAY, hour);
+                startTime.set(Calendar.YEAR, year);
 
-                startTime.set(Calendar.MINUTE, minute);
+                startTime.set(Calendar.MONTH, month);
 
-                startTime.set(Calendar.SECOND, 0);
+                startTime.set(Calendar.DAY_OF_MONTH, dayofmonth);
 
                 long alarmStartTime = startTime.getTimeInMillis();
 
