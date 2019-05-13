@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Jadwal">
+    android:orientation="vertical"
+    tools:context=".Jadwal"
+    android:gravity="center_horizontal"
+    android:padding="20dp">
 
-    <TextView
+    <EditText
+        android:id="@+id/inputdata"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your task"
+        android:layout_marginBottom="20dp"/>
+
+    <TimePicker
+        android:id="@+id/pilihwaktu"
+        android:layout_width="300dp"
+        android:layout_height="342dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+    <Button
+        android:id="@+id/setBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jadwal"
-        android:textSize="80sp"/>
+        android:text="set"
+        android:layout_marginRight="20dp" />
+    <Button
+        android:id="@+id/cancelBtn"
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
+</LinearLayout>
