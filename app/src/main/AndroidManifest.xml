@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lenovo.aps1">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,6 +25,7 @@
         <activity android:name=".Organisasi" />
         <activity android:name=".Jadwal" />
         <activity android:name=".Prestasi"></activity>
+        <receiver android:name=".AlarmReceiver"/>
     </application>
 
 </manifest>
